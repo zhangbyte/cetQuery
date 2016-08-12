@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>多火四六级准考证查询</title>
+    <link rel="stylesheet" type="text/css" href="../css/weui.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="msg">
+            <div class="weui_msg">
+                <div class="hd">
+                    <h1 class="page_title">准考证号查询</h1>
+                    <p class="page_desc">再也不用担心找不到准考证啦</p>
+                </div>
+                <div class="weui_opr_area">
+                <form action="/query" method="post">
+                    <div class="weui_cells weui_cells_form">
+                        <div class="weui_cell">
+                            <div class="weui_cell_hd"><label class="weui_label"  style="text-align: left;">姓名</label></div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <input class="weui_input" type="text" name="name" placeholder="请输入您的姓名"/>
+                            </div>
+                        </div>
+                        <div class="weui_cell">
+                            <div class="weui_cell_hd"><label class="weui_label"  style="text-align: left;">考场</label></div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <input class="weui_input" type="number" name="examroom" placeholder="建议您输入考场号（可不填）"/>
+                            </div>
+                        </div>
+                        <div class="weui_cells weui_cells_radio" style="margin-top: 0;">
+                            <label class="weui_cell weui_check_label" for="x11">
+                                <div class="weui_cell_bd weui_cell_primary">
+                                    <p style="text-align: left;">四级</p>
+                                </div>
+                                <div class="weui_cell_ft">
+                                    <input type="radio" class="weui_check" name="type" id="x11" value="1">
+                                    <span class="weui_icon_checked"></span>
+                                </div>
+                            </label>
+                            <label class="weui_cell weui_check_label" for="x12">
+                                <div class="weui_cell_bd weui_cell_primary">
+                                    <p style="text-align: left;">六级</p>
+                                </div>
+                                <div class="weui_cell_ft">
+                                    <input type="radio" name="type" class="weui_check" id="x12" value="2" checked="checked">
+                                    <span class="weui_icon_checked"></span>
+                                </div>
+                            </label>
+                        </div>
+                        
+                    </div>
+                    <div class="weui_cells_tips">如果提示无法找到，请确认填写信息正确，我们建议您询问同考场的同学的考场号，考场号位于准考证号的第11-13位。如果这样也无法找到，我们也无能为力了！</div>
+                    <div class="weui_btn_area">
+                        <input class="weui_btn weui_btn_primary" value="确定" type="submit"></input>
+                    </div>
+                </form>
+                </div>
+                <div class="weui_extra_area">
+                    <a href="http://viewer.maka.im/k/52C70HVR">关于多火</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

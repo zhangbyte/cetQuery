@@ -1,0 +1,13 @@
+{
+  "name": "cetQuery",
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "crypto": "0.0.3",
+    "ejs": "^2.4.1",
+    "express": "4.13.4",
+    "express-session": "^1.13.0",
+    "iconv-lite": "^0.4.13",
+    "superagent": "^1.8.0-beta.2"
+  }
+}
