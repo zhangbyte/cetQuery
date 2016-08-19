@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
-    <title>多火四六级准考证查询</title>
+    <title>多火四六级成绩查询</title>
     <link rel="stylesheet" type="text/css" href="../css/weui.min.css">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
@@ -16,18 +16,15 @@
                 <div class="weui_icon_area"><i class="weui_icon_success weui_icon_msg"></i></div>
                 <div class="weui_text_area">
                     <h2 class="weui_msg_title" style="color: #3cc51f;">查询成功</h2>
-                    <h3 class="weui_msg_title" style="color: #888;">您的准考证号可能为</h3>
-                    <h3 class="weui_msg_title"><%=id %></h3>
+                    <h3 class="weui_msg_title">您的总分为：<%=score %></h3>
+                    <h3 class="weui_msg_title">听力：<%=score_1 %></h3>
+                    <h3 class="weui_msg_title">阅读：<%=score_2 %></h3>
+                    <h3 class="weui_msg_title">写作和翻译：<%=score_3 %></h3>
                 </div>
                 <div class="weui_opr_area">
-                    <div class="weui_btn_area">
-                    <form action="/queryScore" method="post">
-                        <input type="text" style="display: none;" name="id" value="<%=id %>" />
-                        <input type="text" style="display: none;" name="name" value="<%=name %>" />
-                        <input type="submit" class="weui_btn weui_btn_primary" value="直接查询成绩" />
-                    </form>
-                        <a style="margin-top: 15px" onclick="history.go(-1)" class="weui_btn weui_btn_plain_primary">返回</a>                    
-                    </div>
+                    <p class="weui_btn_area">
+                        <a href="http://cet.duohuo.org" class="weui_btn weui_btn_primary">返回</a>                    
+                    </p>
                 </div>
                 <div class="weui_extra_area">
                     <a href="http://viewer.maka.im/k/52C70HVR">关于多火</a>

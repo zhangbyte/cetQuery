@@ -1,5 +1,4 @@
 var crypt = require('./crypt.js');
-var iconv = require('iconv-lite');
 var http = require('http');
 var ENCRYPT = 1;
 var DECRYPT = 2;
@@ -40,7 +39,7 @@ module.exports = function (type, name, examroom, finalRes) {
                 id = crypt(id, DECRYPT);
                 buffer = new Buffer(id, 'hex');
                 id = buffer.toString();
-                finalRes.render('result', {id: id});
+                finalRes.render('result', {id: id, name: name});
             } else {
                 finalRes.render('err');
             }

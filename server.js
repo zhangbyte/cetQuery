@@ -3,6 +3,7 @@ var bodyParder = require('body-parser');
 var path = require('path');
 
 var queryID = require('./queryID.js');
+var queryScore = require('./queryScore.js');
 
 var app = express();
 
@@ -14,6 +15,10 @@ app.use(bodyParder());
 
 app.get('/', function (req, res) {
      res.render('index');
+});
+
+app.get('/queryScore', function (req, res) {
+    res.render('query');
 });
 
 app.post('/query', function (req, res) {
@@ -38,7 +43,11 @@ app.post('/queryScore', function (req, res) {
     if (!name || !id) {
         res.render('err');
     }
-    
+    name = name.substring(0,name.length>2?2:name.length);
+    if (id.length === 16) {
+        id = id.substring(0,12) + id.substring(13,16);
+    }
+    queryScore(id, name, res);
 });
 
 app.listen(4767, function (req, res) {
