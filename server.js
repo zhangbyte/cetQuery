@@ -30,7 +30,16 @@ app.post('/query', function (req, res) {
         res.render('err');
     }
     queryID(type, name, examroom, res);
-})
+});
+
+app.post('/queryScore', function (req, res) {
+    var name = req.body.name;
+    var id = req.body.id;
+    if (!name || !id) {
+        res.render('err');
+    }
+    
+});
 
 app.listen(4767, function (req, res) {
     console.log('app is running at port 4767');

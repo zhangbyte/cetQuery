@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>多火四六级成绩查询</title>
+    <link rel="stylesheet" type="text/css" href="../public/css/weui.min.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/style.css">
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="msg">
+            <div class="weui_msg">
+                <div class="hd">
+                    <h1 class="page_title" style="font-size: 30px">四六级成绩查询</h1>
+                </div>
+                <div class="weui_opr_area">
+                <form action="/queryScore" method="post">
+                    <div class="weui_cells weui_cells_form">
+                        <div class="weui_cell">
+                            <div class="weui_cell_hd"><label class="weui_label"  style="text-align: left; width: 4em">姓名</label></div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <input class="weui_input" type="text" name="name" placeholder="请输入您的姓名"/>
+                            </div>
+                        </div>
+                        <div class="weui_cell">
+                            <div class="weui_cell_hd"><label class="weui_label"  style="text-align: left; width: 4em">准考证</label></div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <input class="weui_input" type="number" name="id" placeholder="请输入您的准考证号"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weui_btn_area">
+                        <input class="weui_btn weui_btn_primary" value="查询" type="submit"></input>
+                    </div>
+                </form>
+                </div>
+                <div class="weui_extra_area">
+                    <a href="http://viewer.maka.im/k/52C70HVR">关于多火</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

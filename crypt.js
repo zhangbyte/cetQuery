@@ -3,12 +3,12 @@ var changeKey = require('./changeKey.js');
 var xor = require('./util.js').xor;
 
 module.exports = function (postData, flag) {
-  var KEY1 = '29586473';
-  var KEY2 = '754F5258';
+  var KEY1 = '31323179';
+  var KEY2 = '4F37643D';
   var postHex = postData;
   if (flag === 1) {
-    KEY1 = '3E206275';
-    KEY2 = '764F515E';
+    KEY1 = '51676864';
+    KEY2 = '573B4F3B';
     postHex = iconv.encode(postData, 'gbk').toString('hex');
   }
 
