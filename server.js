@@ -23,6 +23,8 @@ app.get('/queryScore', function (req, res) {
 
 app.post('/query', function (req, res) {
     var name = req.body.name;
+    var provice = req.body.provice;
+    var school = req.body.school;
     var examroom = req.body.examroom;
     var type = req.body.type;
     if (examroom) {
@@ -31,10 +33,10 @@ app.post('/query', function (req, res) {
         }
         examroom = examroom.substring(0,3);
     }
-    if (!name) {
+    if (!name || !school) {
         res.render('err');
     }
-    queryID(type, name, examroom, res);
+    queryID(type, name, provice, school, examroom, res);
 });
 
 app.post('/queryScore', function (req, res) {

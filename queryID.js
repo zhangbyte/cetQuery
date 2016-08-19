@@ -4,8 +4,8 @@ var ENCRYPT = 1;
 var DECRYPT = 2;
 var URL = 'http://find.cet.99sushe.com/search';
 
-module.exports = function (type, name, examroom, finalRes) {
-    var postData = 'type=' + type + '&provice=32&school=南京信息工程大学&name=' + name + '&examroom=' + examroom + '&m=';
+module.exports = function (type, name, provice, school, examroom, finalRes) {
+    var postData = 'type=' + type + '&provice=' + provice + '&school=' + school + '&name=' + name + '&examroom=' + examroom + '&m=';
     var mac = '';
     for (var i = 0; i < 5; i++) {
         mac = mac + Math.ceil(Math.random()*15).toString(16) + Math.ceil(Math.random()*15).toString(16) + '-';
