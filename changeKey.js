@@ -29,7 +29,8 @@ module.exports = function (key1, key2, flag) {
   var ebx = 1;
   var edi = parseInt(key2);
   var esi = 0;
-  var ebp = parseInt(0x003BD2C0); 
+  // var ebp = parseInt(0x003BD2C0); 
+  var ebp = parseInt(0x0142D2C0);
 
   //前半部
   eax = rol(eax, 4);
